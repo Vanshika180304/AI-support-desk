@@ -1,0 +1,169 @@
+.ticket-detail-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.detail-header {
+  height: 72px;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-info h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.messages-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message-wrapper {
+  display: flex;
+  gap: 1rem;
+  max-width: 80%;
+  animation: slideUp var(--transition-fast) forwards;
+}
+
+.message-wrapper.sent {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-wrapper.received {
+  align-self: flex-start;
+}
+
+.message-wrapper.system-message {
+  align-self: center;
+  max-width: 90%;
+  opacity: 0.8;
+}
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-color-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.message-wrapper.sent .message-avatar {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.message-bubble {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.message-bubble.sent {
+  background-color: var(--primary);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble.received {
+  background-color: var(--bg-color-secondary);
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 4px;
+}
+
+.message-bubble.system {
+  background-color: transparent;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.message-sender {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+}
+
+.message-content {
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.message-time {
+  font-size: 0.7rem;
+  text-align: right;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.chat-input-area {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--border-color);
+  background-color: rgba(15, 17, 21, 0.9);
+}
+
+.chat-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.chat-form .input-wrapper {
+  margin-bottom: 0;
+}
+
+.chat-form .input-field {
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-full);
+}
+
+.send-btn {
+  border-radius: var(--radius-full);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
