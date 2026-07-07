@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Login } from './pages/Login';
+import { Register } from './pages/Register';
 import { Dashboard } from './pages/Dashboard';
 import { NewTicket } from './pages/NewTicket';
 import { AdminDashboard } from './pages/AdminDashboard';
@@ -10,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         
         {/* Protected Routes (to be wrapped in AuthGuard later) */}
         <Route path="/dashboard" element={<Dashboard />} />
